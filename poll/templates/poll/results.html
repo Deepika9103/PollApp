@@ -1,0 +1,60 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+</head>
+
+<body>
+    <h1 style="text-align: center;margin-top: 2%;;">Results</h1> <br><br>
+    <h2 style="text-align: center;" >{{poll.question}}</h2>   <br>
+    <div style="display: flex;justify-content: center;align-items: center;">
+        <table class="table table-striped" style="width:75%;border-radius: 10%;" >
+            <thead>
+              <tr>
+                <th scope="col">Options</th>
+                <th scope="col">Count</th>
+                <th scope="col">Percentage</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">{{poll.option1}}</th>
+                <td>{{poll.option1_count}}</td>
+                <td>{{  option1per }}%</td>
+              </tr>
+              <tr>
+                <th scope="row">{{poll.option2}}</th>
+                <td>{{poll.option2_count}}</td>
+                <td>{{ option2per }}%</td>
+              </tr>
+              <tr>
+                <th scope="row">{{poll.option3}}</th>
+                <td>{{poll.option3_count}}</td>
+                <td>{{ option3per }}%</td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
+        integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

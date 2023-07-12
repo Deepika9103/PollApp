@@ -1,0 +1,8 @@
+body{
+    background-image: url(bg3.jpg);
+    /* background-position: center; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: aliceblue;
+    font-size: large;
+}
